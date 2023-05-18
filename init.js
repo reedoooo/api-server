@@ -16,7 +16,7 @@ sequelize2
   .then(async () => {
     // Create a new team and store it in the database
     let teamSeed = await Team.create({
-      name: 'YuGiOh',
+      name: 'Mighty Morphin Power Rangers',
       mascot: 'Alpha',
       size: 6,
     });
@@ -30,8 +30,8 @@ sequelize2
   .then(async () => {
     // Create a new teammate and store it in the database
     let teammateSeed = await Teammate.create({
-      name: 'Sasuke',
-      role: 'Sole Survivor of the Uchiha Clan',
+      name: 'Jason',
+      role: 'Red Ranger',
       teamId: teamSeedId,
     });
 

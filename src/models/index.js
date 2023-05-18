@@ -4,7 +4,8 @@
 const { Sequelize } = require('sequelize');
 
 // get SQL connection string
-const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory:';
+// const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory:';
+const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite:memory:' : process.env.DATABASE_URL;
 
 // require data models for related tables
 const team = require('./teamModel');

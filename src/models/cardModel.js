@@ -4,7 +4,7 @@ require('dotenv').config();
 const { Sequelize, DataTypes } = require('sequelize');
 
 // our path to connect to SQL database
-const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory:';
+const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite:memory:' : process.env.DATABASE_URL;
 
 
 // actually connects to the SQL database
@@ -21,7 +21,7 @@ const Cards = sequelize.define('Cards', {
     allowNull: false,
   },
   level: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   monster: {

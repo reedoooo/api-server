@@ -13,16 +13,16 @@ Code Fellows - Code 401 - Class 03 Lab
 - Pull Requests:
 
   - [PR1](https://github.com/reedoooo/api-server/commits/main)
-  - [PR2](##########)
+  - [PR2](https://github.com/reedoooo/api-server/commits/main)
   - [PR2](##########)
 
 ## Server
 
-URL: https://api-server.herokuapp.com
+URL: https://api-server-tsg2.onrender.com/
 
-Endpoint: /
+Endpoint: /cards
 
-Example: https://api-server.herokuapp.com/person?name=Tha+Human
+Example: https://api-server-tsg2.onrender.com/person?name=Tha+Human
 
 ## UML Architecture
 

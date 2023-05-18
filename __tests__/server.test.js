@@ -20,8 +20,8 @@ describe('Testing if server sends back proper responses & status codes', () => {
 
   test('Should send a 201 on a successful POST, creating one', async () => {
     const req = {
-      name: 'name',
-      type: 'type',
+      name: 'salad',
+      type: 'monster',
       level: 0,
       monster: false,
     };

@@ -4,8 +4,11 @@
   "description": "Code Fellows - Code 401 - Lab 03",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "test": "NODE_ENV=test jest --verbose --coverage",
+    "test-watch": "NODE_ENV=test jest --watchAll --verbose --coverage",
+    "init:config": "sequelize init:config",
+    "db:create": "sequelize db:create"
   },
   "repository": {
     "type": "git",
