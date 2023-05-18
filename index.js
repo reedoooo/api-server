@@ -6,7 +6,7 @@ const { sequelize } = require('./src/models/cardModel');
 
 sequelize.sync()
   .then(() => {
-    server.start(process.env.PORT);
+    server.start(process.env.port || 3001);
   })
   .catch(error => {
     console.error('SQL CONNECTION ERROR: ', error);

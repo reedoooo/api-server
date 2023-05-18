@@ -30,13 +30,13 @@ describe('test Team data model & CRUD Operations inherited from Collection class
 
   test('Able to create a new Teammate', async () => {
     let newTeammate = await Teammate.create({
-      name: 'The Dude',
-      role: 'His Dudeness',
+      name: 'Tha Human',
+      role: 'Tha Humanest',
       teamId: 1,
     });
 
-    expect(newTeammate.name).toEqual('The Dude');
-    expect(newTeammate.role).toEqual('His Dudeness');
+    expect(newTeammate.name).toEqual('Tha Human');
+    expect(newTeammate.role).toEqual('Tha Humanest');
     expect(newTeammate.teamId).toEqual(1);
     expect(newTeammate.id).toBeTruthy();
   });
@@ -60,7 +60,7 @@ describe('test Team data model & CRUD Operations inherited from Collection class
     expect(foundTeam.mascot).toBeTruthy();
     expect(foundTeam.size).toBeTruthy();
     expect(foundTeam.id).toBeTruthy();
-    expect(foundTeam.Teammates[0].name).toEqual('The Dude');
+    expect(foundTeam.Teammates[0].name).toEqual('Tha Human');
 
   });
 

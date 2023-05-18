@@ -45,15 +45,13 @@ sequelize2
 sequelize
   .sync()
   .then(async () => {
-    // Create a new food item and store it in the database
-    let initialSeed = await Card.create({
+    let initialSeed = await Cards.create({
       name: 'BlueEyes',
       type: 'Dragon',
       level: 8,
       monster: true,
     });
 
-    // Log that the food item was successfully created
     console.log('Card Database seeded with ', initialSeed);
   })
   // Catch and log any errors that occurred during the above process

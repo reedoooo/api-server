@@ -27,7 +27,6 @@ app.use(logger);
 app.use(validator);
 
 // uses router when any request is made to food route
-// app.use('/food', validator, foodRouter);
 app.use('/cards', cardRouter);
 app.use('/team', teamRouter);
 app.use('/teammate', teammateRouter);

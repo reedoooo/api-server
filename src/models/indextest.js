@@ -5,7 +5,7 @@
 const { Sequelize } = require('sequelize');
 
 // get SQL connection string
-const SQL_URL = 'sqlite::memory:';
+const DATABASE_URL = 'sqlite::memory:';
 
 // require data models for related tables
 const team = require('./teamModel');
@@ -15,7 +15,7 @@ const teammate = require('./teammateModel');
 const Collection = require('./collection');
 
 // instantiates a sequelize ORM (object-relational mapper)
-const sequelize = new Sequelize(SQL_URL);
+const sequelize = new Sequelize(DATABASE_URL);
 
 // pass instantiated sequelize ORM to the db models so that sequelize knows how to define each model/table
 const teamModel = team(sequelize);

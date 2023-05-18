@@ -1,7 +1,7 @@
 'use strict';
 
 const handle404 = (err, request, response, next) => {
-  if (!request.url.includes('/food')) {
+  if (!request.url.includes('/cards') || !request.url.includes('/team') || !request.url.includes('/teammate')) {
     err.message = 'Invalid request route';
     response.status(404).send(err);    
   }
