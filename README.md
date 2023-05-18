@@ -8,11 +8,11 @@ Code Fellows - Code 401 - Class 03 Lab
 
 - Github Actions:
 
-  - [Actions](##########)
+  - [Actions](https://github.com/reedoooo/api-server/actions)
 
 - Pull Requests:
 
-  - [PR1](##########)
+  - [PR1](https://github.com/reedoooo/api-server/commits/main)
   - [PR2](##########)
   - [PR2](##########)
 

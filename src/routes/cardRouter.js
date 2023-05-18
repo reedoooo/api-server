@@ -52,13 +52,10 @@ const deleteCard = async (request, response, next) => {
 
 // Routes
 router.post('/', printCard);
-
 router.get('/', readAllCard);
 router.get('/:id', readOneCard);
-
 router.put('/:id', replaceCard);
 router.patch('/:id', updateCard);
-
 router.delete('/:id', deleteCard);
 
 module.exports = router;

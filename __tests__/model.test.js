@@ -10,8 +10,8 @@ afterAll(async() => {
   await sequelize.drop();
 });
 
-let teamId;
-let teammateId;
+// let teamId;
+// let teammateId;
 
 describe('test Team data model & CRUD Operations inherited from Collection class', () => {
 

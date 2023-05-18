@@ -21,7 +21,7 @@ const Cards = sequelize.define('Cards', {
     allowNull: false,
   },
   level: {
-    type: DataTypes.STRING,
+    type: DataTypes.NUMBER,
     allowNull: false,
   },
   monster: {

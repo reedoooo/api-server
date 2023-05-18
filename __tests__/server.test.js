@@ -22,7 +22,7 @@ describe('Testing if server sends back proper responses & status codes', () => {
     const req = {
       name: 'name',
       type: 'type',
-      level: 'level',
+      level: 0,
       monster: false,
     };
     const response = await request.post('/cards').send(req);
@@ -48,7 +48,7 @@ describe('Testing if server sends back proper responses & status codes', () => {
     const req = {
       name: 'Salad',
       type: 'Elven',
-      level: 'Nature',
+      level: 7,
       monster: false,   
     };
     const response = await request.put('/cards/17').send(req);
@@ -59,7 +59,7 @@ describe('Testing if server sends back proper responses & status codes', () => {
     const req = {
       name: 'Quesadilla',
       type: 'Mexican',
-      level: 'Cheese',    
+      level: 2,    
     };
     const response = await request.patch('/cards/17').send(req);
     expect(response.status).toBe(200);
