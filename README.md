@@ -25,3 +25,7 @@ Example: https://api-server-tsg2.onrender.com/cards
 ## UML Architecture
 
 ![UML Architecture](./UML-diagram.JPG)
+
+## Takeaways
+
+Always follow the instructions as carefully as possible
