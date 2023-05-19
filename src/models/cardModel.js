@@ -25,7 +25,7 @@ const Cards = sequelize.define('Cards', {
   },
   monster: {
     type: DataTypes.BOOLEAN,
-    allowNull: true,
+    allowNull: false,
   },
 });
 

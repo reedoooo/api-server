@@ -4,7 +4,7 @@ Code Fellows - Code 401 - Class 03 Lab
 
 - server deploy:
 
-  - [BasicDeploy](##########)
+  - [BasicDeploy](https://api-server-tsg2.onrender.com)
 
 - Github Actions:
 
@@ -12,9 +12,7 @@ Code Fellows - Code 401 - Class 03 Lab
 
 - Pull Requests:
 
-  - [PR1](https://github.com/reedoooo/api-server/commits/main)
-  - [PR2](https://github.com/reedoooo/api-server/commits/main)
-  - [PR2](##########)
+  - [PR1](https://github.com/reedoooo/api-server/pull/1)
 
 ## Server
 
@@ -22,10 +20,8 @@ URL: https://api-server-tsg2.onrender.com/
 
 Endpoint: /cards
 
-Example: https://api-server-tsg2.onrender.com/person?name=Tha+Human
+Example: https://api-server-tsg2.onrender.com/cards
 
 ## UML Architecture
 
 ![UML Architecture](./UML-diagram.JPG)
-
-### Partner Review
