@@ -10,33 +10,33 @@ afterAll(async() => {
   await sequelize.drop();
 });
 
-let teamId;
-let teammateId;
+// let teamId;
+// let teammateId;
 
 describe('test Team data model & CRUD Operations inherited from Collection class', () => {
 
   test('Able to create a new Team', async () => {
     let newTeam = await Team.create({
-      name: 'Super Mega Cool Squad',
-      mascot: 'Super Mega Dragon Mammoth',
+      name: 'reedvogt_team',
+      mascot: 'reedvogt',
       size: 100,
     });
 
-    expect(newTeam.name).toEqual('Super Mega Cool Squad');
-    expect(newTeam.mascot).toEqual('Super Mega Dragon Mammoth');
+    expect(newTeam.name).toEqual('reedvogt');
+    expect(newTeam.mascot).toEqual('reedvogt');
     expect(newTeam.size).toEqual(100);
     expect(newTeam.id).toBeTruthy();
   });
 
   test('Able to create a new Teammate', async () => {
     let newTeammate = await Teammate.create({
-      name: 'Tha Human',
-      role: 'Tha Humanest',
+      name: 'reedvogt_user',
+      role: 'reedvogt',
       teamId: 1,
     });
 
-    expect(newTeammate.name).toEqual('Tha Human');
-    expect(newTeammate.role).toEqual('Tha Humanest');
+    expect(newTeammate.name).toEqual('reedvogt_user');
+    expect(newTeammate.role).toEqual('reedvogt');
     expect(newTeammate.teamId).toEqual(1);
     expect(newTeammate.id).toBeTruthy();
   });
@@ -60,7 +60,7 @@ describe('test Team data model & CRUD Operations inherited from Collection class
     expect(foundTeam.mascot).toBeTruthy();
     expect(foundTeam.size).toBeTruthy();
     expect(foundTeam.id).toBeTruthy();
-    expect(foundTeam.Teammates[0].name).toEqual('Tha Human');
+    expect(foundTeam.Teammates[0].name).toEqual('reedvogt');
 
   });
 

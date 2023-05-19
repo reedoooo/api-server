@@ -1,11 +1,14 @@
 // Use strict mode to avoid common JavaScript pitfalls
 'use strict';
-
+// const { sequelize } = require('./src/models/index');
 // Import the sequelize instance and Food model from foodModel.js
+// const { Cards } = require('./src/models/cards/cardModel');
 const { sequelize, Cards } = require('./src/models/cardModel');
 
+// const { Clothes } = require('./src/models/clothes/clothesModel');
+
 // Import the sequelize instance, Team and Teammate models from index.js
-const { sequelize: sequelize2, Team, Teammate } = require('./src/models/index');
+const { sequelize : sequelize2, Team, Teammate } = require('./src/models/index');
 
 // Declare a variable to store the ID of the team we're going to seed
 let teamSeedId;
@@ -16,7 +19,7 @@ sequelize2
   .then(async () => {
     // Create a new team and store it in the database
     let teamSeed = await Team.create({
-      name: 'Mighty Morphin Power Rangers',
+      name: 'reedvogt',
       mascot: 'Alpha',
       size: 6,
     });
@@ -30,8 +33,8 @@ sequelize2
   .then(async () => {
     // Create a new teammate and store it in the database
     let teammateSeed = await Teammate.create({
-      name: 'Jason',
-      role: 'Red Ranger',
+      name: 'reedvogt_user',
+      role: 'reedvogt',
       teamId: teamSeedId,
     });
 
@@ -42,8 +45,7 @@ sequelize2
   .catch((error) => console.error(error));
 
 // Sync the sequelize instance with the Food model
-sequelize
-  .sync()
+sequelize.sync()
   .then(async () => {
     let initialSeed = await Cards.create({
       name: 'BlueEyes',
