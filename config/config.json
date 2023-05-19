@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "reedvogt",
-    "password": null,
-    "database": "thahuman-database",
+    "username": "reedvogt_user",
+    "password": "pfzpgwLIbBGvg1atltIDU34Ea3wwxOQQ",
+    "database": "reedvogt",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // Middleware
 const logger = require('./middleware/logger');
-const validator = require('./middleware/validator');
+// const validator = require('./middleware/validator');
 
 // Error Handlers
 const handle404 = require('./error-handlers/handle404');
@@ -17,6 +17,7 @@ const app = express();
 
 // require router
 const cardRouter = require('./routes/cardRouter');
+// const clothesRouter = require('./routes/clothesRouter');
 const teamRouter = require('./routes/teamRouter');
 const teammateRouter = require('./routes/teammateRouter');
 
@@ -24,10 +25,11 @@ const teammateRouter = require('./routes/teammateRouter');
 app.use(cors());
 app.use(express.json());
 app.use(logger);
-app.use(validator);
+// app.use(validator);
 
 // uses router when any request is made to food route
 app.use('/cards', cardRouter);
+// app.use('/clothes', clothesRouter);
 app.use('/team', teamRouter);
 app.use('/teammate', teammateRouter);
 

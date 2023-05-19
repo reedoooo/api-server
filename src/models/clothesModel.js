@@ -1,5 +1,29 @@
 'use strict';
 
+// module.exports = (sequelize, DataTypes) => {
+  
+//   console.log('Cards model created');
+
+//   return sequelize.define('Cards', {
+//     name: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     type: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     level: {
+//       type: DataTypes.INTEGER,
+//       allowNull: false,
+//     },
+//     monster: {
+//       type: DataTypes.BOOLEAN,
+//       allowNull: true,
+//     },
+//   });
+// };
+
 require('dotenv').config();
 const { Sequelize, DataTypes } = require('sequelize');
 
@@ -10,20 +34,20 @@ const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite:memory:' : proces
 const sequelize = new Sequelize(DATABASE_URL);
 
 // defines table and all of its columns (each property on the defined object is a column in the SQL table)
-const Cards = sequelize.define('Cards', {
-  name: {
+const Clothes = sequelize.define('Clothes', {
+  types: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  type: {
+  color: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  level: {
-    type: DataTypes.INTEGER,
+  size: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
-  monster: {
+  expensive: {
     type: DataTypes.BOOLEAN,
     allowNull: true,
   },
@@ -31,5 +55,5 @@ const Cards = sequelize.define('Cards', {
 
 module.exports = {
   sequelize,
-  Cards,
+  Clothes,
 };
